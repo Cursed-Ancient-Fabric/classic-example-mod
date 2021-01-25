@@ -1,9 +1,6 @@
 package net.fabricmc.example;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.loader.entrypoint.EntrypointTransformer;
-import net.fabricmc.loader.launch.common.FabricLauncherBase;
-import java.lang.reflect.InvocationTargetException;
 
 public class ExampleMod implements ModInitializer {
 

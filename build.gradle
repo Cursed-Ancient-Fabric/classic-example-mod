@@ -1,5 +1,5 @@
 plugins {
-	id 'textile-loom' version '0.5.1+build12'
+	id 'textile-loom' version 'b8d8aae'
 	id 'maven-publish'
 }
 
@@ -16,11 +16,12 @@ repositories {
 
 dependencies {
 	// To change the versions see the gradle.properties file
-	minecraft name: "rd-132211", version: "rd-132211"
-	mappings files("yarn-rd-132211+build21d023-v2.jar")
-	modImplementation "com.github.Cursed-Ancient-Fabric:preclassic-loader:b6f179763d"
+	minecraft name: "rd-132328", version: "rd-132328"
+	mappings files("yarn-rd-132328+build21d024-v2.jar")
+	modImplementation "com.github.Cursed-Ancient-Fabric:preclassic-loader:09c311d"
 
 	// Some dependencies aren't gotten by the loader, so we add them ourselves
+	implementation 'com.github.Cursed-Ancient-Fabric:preclassic-tiny-remapper:421c900'
 	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.8.1'
 	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.1'
 	implementation 'com.google.guava:guava:28.0-jre'
@@ -34,11 +35,15 @@ dependencies {
 	annotationProcessor group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.1'
 }
 
+tasks.remapJar.remapOptions {
+	it.ignoreConflicts()
+}
+
 minecraft {
 	intermediaryUrl = {
-		return "https://github.com/Cursed-Ancient-Fabric/preclassic-intermediary/blob/intermediary/intermediary-rd-132211-intermediary-v2.jar?raw=true"
+		return "https://github.com/Cursed-Ancient-Fabric/preclassic-intermediary/blob/intermediary/intermediary-rd-132328-intermediary-v2.jar?raw=true"
 	}
-	customManifest = "https://launchermeta.mojang.com/v1/packages/8b6e0c4f183ffb61b6a0c818787b0499b315123e/rd-132211.json"
+	customManifest = "https://launchermeta.mojang.com/v1/packages/75ae3d2cf1615ed2e42e7e1ad8147db49357e029/rd-132328.json"
 	clientOnly = true
 }
 
