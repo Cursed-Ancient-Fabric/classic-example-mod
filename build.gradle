@@ -16,8 +16,8 @@ repositories {
 
 dependencies {
 	// To change the versions see the gradle.properties file
-	minecraft name: "rd-132328", version: "rd-132328"
-	mappings files("yarn-rd-132328+build21d024-v2.jar")
+	minecraft name: "rd-160052", version: "rd-160052"
+	mappings files("yarn-rd-160052+build21d026-v2.jar")
 	modImplementation "com.github.Cursed-Ancient-Fabric:preclassic-loader:09c311d"
 
 	// Some dependencies aren't gotten by the loader, so we add them ourselves
@@ -41,9 +41,9 @@ tasks.remapJar.remapOptions {
 
 minecraft {
 	intermediaryUrl = {
-		return "https://github.com/Cursed-Ancient-Fabric/preclassic-intermediary/blob/intermediary/intermediary-rd-132328-intermediary-v2.jar?raw=true"
+		return "https://github.com/Cursed-Ancient-Fabric/preclassic-intermediary/blob/intermediary/intermediary-rd-160052-intermediary-v2.jar?raw=true"
 	}
-	customManifest = "https://launchermeta.mojang.com/v1/packages/75ae3d2cf1615ed2e42e7e1ad8147db49357e029/rd-132328.json"
+	customManifest = "https://launchermeta.mojang.com/v1/packages/58c0d55cd4e7a5d631f498e4bab5ee0a609a3e0c/rd-160052.json"
 	clientOnly = true
 }
 
