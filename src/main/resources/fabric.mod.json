@@ -28,7 +28,7 @@
 
   "depends": {
     "fabricloader": "*",
-    "minecraft": ["161348", "0.0.0-rd.161348"]
+    "minecraft": ["0.0.11", "0.0.0-c0.0.11"]
   },
   "suggests": {
     "another-mod": "*"

@@ -16,8 +16,8 @@ repositories {
 
 dependencies {
 	// To change the versions see the gradle.properties file
-	minecraft name: "rd-161348", version: "rd-161348"
-	mappings files("yarn-rd-161348+build21d026-v2.jar")
+	minecraft name: "c0.0.11a", version: "c0.0.11a"
+	mappings files("yarn-c0.0.11a+build21d027-v2.jar")
 	modImplementation "com.github.Cursed-Ancient-Fabric:preclassic-loader:09c311d"
 
 	// Some dependencies aren't gotten by the loader, so we add them ourselves
@@ -41,9 +41,9 @@ tasks.remapJar.remapOptions {
 
 minecraft {
 	intermediaryUrl = {
-		return "https://github.com/Cursed-Ancient-Fabric/preclassic-intermediary/blob/intermediary/intermediary-rd-161348-intermediary-v2.jar?raw=true"
+		return "https://github.com/Cursed-Ancient-Fabric/classic-intermediary/blob/intermediary/intermediary-c0.0.11a-intermediary-v2.jar?raw=true"
 	}
-	customManifest = "https://launchermeta.mojang.com/v1/packages/757cb41649206f6209673a987ce550fd2218f2a8/rd-161348.json"
+	customManifest = "https://archive.org/download/Minecraft-JE-Classic/c0.0.11a-launcher/c0.0.11a-launcher.json"
 	clientOnly = true
 }
 
